@@ -1,0 +1,44 @@
+# Chaves, senhas e segredos: nunca sobem
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*secret*
+*segredo*
+*senha*
+*token*
+*credencial*
+*credential*
+configuracao.local.*
+
+# Anotações pessoais e rascunhos
+anotacoes*
+anotações*
+notas*
+rascunho*
+*.rascunho.md
+TODO.md
+*.local.md
+
+# Configuração local do Claude (só desta máquina)
+.claude/settings.local.json
+.claude/*.local.*
+
+# Arquivos do sistema e de editores
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Dependências e temporários, se um dia existirem
+node_modules/
+dist/
+build/
+*.log
+*.tmp
