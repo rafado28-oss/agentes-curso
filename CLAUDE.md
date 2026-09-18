@@ -46,9 +46,9 @@ Estas regras são fixas. Não se propõe alternativa, não se troca por algo "me
 1. **Pesquisador** (monitor): varre as fontes preferidas e depois a internet aberta, lê cada página e grava de cinco a dez itens em `fontes/AAAA-MM-DD.md`, com título, link, veículo, data e três linhas do que a fonte diz, sem interpretar. Marca `[OPINIÃO]` o que for opinião. Não escolhe, não opina.
 2. **Verificador** (auditor): reabre cada link de `fontes/` e confere se a página existe, se o título bate, se as três linhas estão lá e se a data está certa. Grava a tabela em `verificacao/AAAA-MM-DD.md` com CONFERE, NÃO CONFERE ou NÃO ABRIU. Não altera `fontes/`, não inclui item novo.
 3. **Redator** (consolidador): lê os diários anteriores para não repetir, escolhe os itens CONFERE mais relevantes, traduz e escreve o briefing em `diario/AAAA-MM-DD.md` no tom combinado. Gera `index.html` a partir de `modelo-index.html`.
-4. **Guarda** (auditor): lê o diário do dia e o `index.html` e faz seis conferências: dado pessoal, afirmação sem link, opinião como fato, item fora do tema, chave ou senha, rodapé. Termina com PODE PUBLICAR ou NÃO PUBLIQUE. Só lê.
-5. **Humorista** (consolidador): só depois de PODE PUBLICAR, lê o diário do dia e escreve um post curto para o LinkedIn (até 1.300 caracteres), com humor ácido e inteligente, para quem não entende de IA, no meu tom. Grava `linkedin/AAAA-MM-DD.docx` com o post e os links para o primeiro comentário. Não publica.
-- Só se publica com PODE PUBLICAR. Com NÃO PUBLIQUE, o redator corrige e o guarda lê de novo. O humorista só roda depois disso.
+4. **Humorista** (consolidador): depois do redator e antes do guarda, lê o diário do dia e escreve um post curto para o LinkedIn (até 1.300 caracteres), com humor ácido e inteligente, para quem não entende de IA, no meu tom. Grava `linkedin/AAAA-MM-DD.docx` com o post e os links para o primeiro comentário; o texto do post também entra no fim do diário, numa seção `## humorista`, para o guarda revisar. Não publica.
+5. **Guarda** (auditor): lê o diário do dia e o `index.html` e faz seis conferências: dado pessoal, afirmação sem link, opinião como fato, item fora do tema, chave ou senha, rodapé. Termina com PODE PUBLICAR ou NÃO PUBLIQUE. Só lê.
+- A ordem de execução é a da skill `radar`: pesquisador, verificador, redator, humorista, guarda. Só se publica com PODE PUBLICAR. Com NÃO PUBLIQUE, nada é gravado no repositório até eu resolver.
 - Critério de relevância, nesta ordem: (a) muda o que eu posso usar ou ensinar; (b) é de ferramenta que já uso em aula; (c) é de fonte primária; (d) é recente.
 
 ### Formato do briefing
@@ -89,4 +89,4 @@ Estas regras são fixas. Não se propõe alternativa, não se troca por algo "me
 - Um agente por vez ao montar o time. Depois de cada um, pare e diga o que eu devo testar.
 - Mostre a diferença de cada arquivo (o que mudou, linha a linha) antes de eu aceitar.
 - Fale em português, para quem não programa. Se precisar de uma palavra técnica, explique em uma frase.
-- Quando eu pedir "roda o radar", execute o time na ordem (pesquisador, verificador, redator, guarda e, se PODE PUBLICAR, humorista), me mostre o briefing do dia, a decisão do guarda e o texto do post.
+- Quando eu pedir "roda o radar" (ou usar `/radar`), use a skill `radar` em `.claude/skills/radar/SKILL.md`. Ela roda o time na ordem, grava o dia com um commit se o guarda aprovar, e me mostra a manchete, a contagem e a decisão do guarda.

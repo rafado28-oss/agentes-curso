@@ -46,9 +46,9 @@ O que o time faz todo dia, nesta ordem:
 1. **Pesquisador** varre primeiro as fontes listadas acima e depois a internet aberta (três a cinco buscas diferentes), procurando o que foi publicado desde o último briefing. Abre e lê cada página. Grava de cinco a dez itens em `fontes/AAAA-MM-DD.md`, com título, link, veículo, data e três linhas do que a fonte diz, sem interpretar. Marca `[OPINIÃO]` o que for opinião. No fim, lista as buscas feitas e o que não encontrou.
 2. **Verificador** reabre cada link de `fontes/` e confere se a página existe, se o título bate, se as três linhas estão lá e se a data está certa. Grava a tabela em `verificacao/AAAA-MM-DD.md` com CONFERE, NÃO CONFERE ou NÃO ABRIU e o motivo. Não altera `fontes/`, não inclui item novo.
 3. **Redator** lê os briefings anteriores para não repetir, escolhe os itens CONFERE mais relevantes, traduz para português do Brasil e escreve o briefing em `diario/AAAA-MM-DD.md` no tom combinado. Gera `index.html` a partir de `modelo-index.html`, mantendo o rodapé.
-4. **Guarda** lê o briefing do dia e o `index.html` e faz seis conferências: dado pessoal, afirmação sem link, opinião como fato, item fora do tema, chave ou senha, rodapé. Termina com PODE PUBLICAR ou NÃO PUBLIQUE.
-5. Só se publica com PODE PUBLICAR. Com NÃO PUBLIQUE, o redator corrige e o guarda lê de novo.
-6. **Humorista**, só depois de PODE PUBLICAR, lê o diário do dia e escreve um post curto para o LinkedIn, com humor ácido e inteligente, para quem não entende de IA, no meu tom. Grava `linkedin/AAAA-MM-DD.docx` com o post e os links para o primeiro comentário. Quem publica sou eu.
+4. **Humorista**, depois do redator e antes do guarda, lê o diário do dia e escreve um post curto para o LinkedIn, com humor ácido e inteligente, para quem não entende de IA, no meu tom. Grava `linkedin/AAAA-MM-DD.docx` com o post e os links para o primeiro comentário, e o post entra no fim do diário para o guarda revisar. Quem publica sou eu.
+5. **Guarda** lê o briefing do dia (com o post) e o `index.html` e faz seis conferências: dado pessoal, afirmação sem link, opinião como fato, item fora do tema, chave ou senha, rodapé. Termina com PODE PUBLICAR ou NÃO PUBLIQUE.
+6. Só com PODE PUBLICAR o dia é gravado no repositório (commit e push). Com NÃO PUBLIQUE, nada sobe até eu resolver.
 
 Critério de relevância, nesta ordem: (a) muda o que eu posso usar ou ensinar; (b) é de uma ferramenta que eu já uso em aula; (c) é de fonte primária; (d) é recente.
 
