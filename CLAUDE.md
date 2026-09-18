@@ -18,10 +18,16 @@ Estas regras são fixas. Não se propõe alternativa, não se troca por algo "me
 
 ### Onde ficam os arquivos
 
-- `CLAUDE.md` e `RADAR.md` ficam na raiz desta pasta.
-- Os briefings ficam na subpasta `briefings/`, um arquivo por dia, com o nome `AAAA-MM-DD.md` (exemplo: `briefings/2026-09-18.md`).
-- Os agentes do time ficam em `.claude/agents/`. São três: `pesquisador`, `editor` e `revisor`.
-- Nada desta pasta é publicado na internet.
+- `CLAUDE.md`, `RADAR.md`, `README.md`, `modelo-index.html` e `index.html` ficam na raiz desta pasta.
+- As anotações brutas do pesquisador ficam em `fontes/AAAA-MM-DD.md`, um arquivo por dia.
+- A conferência do verificador fica em `verificacao/AAAA-MM-DD.md`, um arquivo por dia.
+- O briefing fica em `diario/AAAA-MM-DD.md`, um arquivo por dia (exemplo: `diario/2026-09-18.md`).
+- `index.html` é a página do briefing do dia, gerada a partir de `modelo-index.html`. O modelo não muda; só o `index.html` é regravado.
+- O post do LinkedIn fica em `linkedin/AAAA-MM-DD.docx` (e o texto de trabalho em `linkedin/AAAA-MM-DD.txt`), um por dia.
+- Os posts meus que servem de referência de tom ficam em `estilo/exemplos.md`. Só eu escrevo nesse arquivo.
+- Scripts de apoio ficam em `ferramentas/`. Hoje há um: `post_para_docx.py`, que transforma o texto do post em Word e confere as regras dele.
+- Os agentes do time ficam em `.claude/agents/`. São cinco: `pesquisador`, `verificador`, `redator`, `guarda` e `humorista`.
+- O que vai para a internet (GitHub Pages) é o `index.html`, que aponta para os arquivos de `diario/`. O repositório inteiro é público, então nenhum arquivo desta pasta pode ter dado pessoal, chave ou senha.
 
 ### Fontes
 
@@ -37,30 +43,45 @@ Estas regras são fixas. Não se propõe alternativa, não se troca por algo "me
 
 ### O time e a ordem do trabalho
 
-1. **Pesquisador**: varre as fontes procurando o que foi publicado desde o último briefing. Para cada item, guarda título, link, data e resumo do fato. Não escolhe, não opina.
-2. **Editor**: lê os briefings anteriores em `briefings/` para não repetir, escolhe as cinco mais relevantes, traduz e escreve no tom combinado.
-3. **Revisor**: confere cada afirmação contra o link, aplica os Observáveis de `RADAR.md` e devolve ao Editor o que não passar. Só grava o que passou.
+1. **Pesquisador** (monitor): varre as fontes preferidas e depois a internet aberta, lê cada página e grava de cinco a dez itens em `fontes/AAAA-MM-DD.md`, com título, link, veículo, data e três linhas do que a fonte diz, sem interpretar. Marca `[OPINIÃO]` o que for opinião. Não escolhe, não opina.
+2. **Verificador** (auditor): reabre cada link de `fontes/` e confere se a página existe, se o título bate, se as três linhas estão lá e se a data está certa. Grava a tabela em `verificacao/AAAA-MM-DD.md` com CONFERE, NÃO CONFERE ou NÃO ABRIU. Não altera `fontes/`, não inclui item novo.
+3. **Redator** (consolidador): lê os diários anteriores para não repetir, escolhe os itens CONFERE mais relevantes, traduz e escreve o briefing em `diario/AAAA-MM-DD.md` no tom combinado. Gera `index.html` a partir de `modelo-index.html`.
+4. **Guarda** (auditor): lê o diário do dia e o `index.html` e faz seis conferências: dado pessoal, afirmação sem link, opinião como fato, item fora do tema, chave ou senha, rodapé. Termina com PODE PUBLICAR ou NÃO PUBLIQUE. Só lê.
+5. **Humorista** (consolidador): só depois de PODE PUBLICAR, lê o diário do dia e escreve um post curto para o LinkedIn (até 1.300 caracteres), com humor ácido e inteligente, para quem não entende de IA, no meu tom. Grava `linkedin/AAAA-MM-DD.docx` com o post e os links para o primeiro comentário. Não publica.
+- Só se publica com PODE PUBLICAR. Com NÃO PUBLIQUE, o redator corrige e o guarda lê de novo. O humorista só roda depois disso.
 - Critério de relevância, nesta ordem: (a) muda o que eu posso usar ou ensinar; (b) é de ferramenta que já uso em aula; (c) é de fonte primária; (d) é recente.
 
 ### Formato do briefing
 
 - Linha 1 — **Manchete do dia:** uma frase, "Saiu X, que muda Y."
 - Linha 2 — **Nas suas ferramentas:** uma frase, "Atualização em A e B; nada novo em C."
-- Depois, até cinco notícias. Cada uma com: título em português; resumo de três a cinco linhas que não pula ponto importante; "Por que importa" em uma frase; fonte com nome + link + data.
+- Depois, até cinco notícias. Cada uma com: título em português; duas ou três linhas com o fato, o que muda e por que importa, sem pular ponto importante; fonte com nome + link + data.
+- Opinião só entra atribuída: "Segundo Fulano, da Empresa X".
+- No fim, a seção "O que não conferiu", só com os títulos dos itens que não passaram na verificação, e a data e hora em que o briefing foi escrito.
 - Tom explicativo. Não explica termos básicos de IA.
 - Se houver menos de cinco coisas relevantes, traz menos e diz "dia fraco". Nunca completa com enchimento.
 - Cabe em uma página.
 
+### Formato do post do LinkedIn
+
+- Um post por dia, até 1.300 caracteres com espaços, três a cinco parágrafos curtos, uma linha em branco entre eles.
+- Todo fato do post está no diário do dia. A piada pode exagerar o comentário, nunca o fato.
+- Humor ácido e inteligente sobre o setor, nunca sobre pessoas. Informa e diverte ao mesmo tempo.
+- No meu tom: direto, informal, primeira pessoa, frases curtas. Nada que pareça escrito por IA: sem emoji, sem travessão, sem lista, sem hashtag, sem linha em branco dupla, sem as frases feitas.
+- Os links das notícias usadas vão no `.docx`, embaixo do post, para eu colar no primeiro comentário.
+
 ## 3. O que este radar nunca faz
 
-- Nunca repete notícia de briefing anterior. Desdobramento entra como "atualização de X", só com o que é novo.
+- Nunca repete notícia de briefing anterior. Desdobramento entra como "Atualização: X", só com o que é novo.
 - Nunca traz fofoca ou polêmica de pessoas: brigas, saídas, tretas, declarações fora de contexto.
 - Nunca dá opinião como se fosse fato. Análise de alguém vem com o nome de quem disse.
 - Nunca cita rede social sem link para a fonte original.
 - Nunca traz afirmação sem link verificável. Se não achou o link, a notícia não entra.
 - Nunca inventa notícia, data, número ou citação. Se não tem certeza, não entra.
 - Nunca pede, guarda ou usa dado pessoal meu ou de terceiros (nome de cliente, empresa, salário, endereço). Se aparecer numa fonte, ignora.
-- Nunca envia e-mail ou mensagem. O briefing é gravado em `briefings/` e pronto.
+- Nunca apaga ou reescreve um diário de dia anterior.
+- Nunca faz piada com pessoa, nem com nome, nem por descrição. Empresa e produto podem.
+- Nunca envia e-mail ou mensagem, nem publica no LinkedIn. O briefing é gravado em `diario/`, vira `index.html`, o post fica em `linkedin/` e pronto. Quem posta sou eu.
 
 ## 4. Como trabalhar comigo
 
@@ -68,4 +89,4 @@ Estas regras são fixas. Não se propõe alternativa, não se troca por algo "me
 - Um agente por vez ao montar o time. Depois de cada um, pare e diga o que eu devo testar.
 - Mostre a diferença de cada arquivo (o que mudou, linha a linha) antes de eu aceitar.
 - Fale em português, para quem não programa. Se precisar de uma palavra técnica, explique em uma frase.
-- Quando eu pedir "roda o radar", execute o time na ordem (Pesquisador, Editor, Revisor) e me mostre o briefing do dia.
+- Quando eu pedir "roda o radar", execute o time na ordem (pesquisador, verificador, redator, guarda e, se PODE PUBLICAR, humorista), me mostre o briefing do dia, a decisão do guarda e o texto do post.

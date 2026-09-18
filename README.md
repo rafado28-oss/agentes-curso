@@ -4,7 +4,7 @@ este radar acompanha noticias novas do universo de inteligencia artificial
 
 ## O que ele faz
 
-Todo dia, um time de três agentes (pesquisador, editor e revisor) varre as fontes que eu escolhi, separa o que é novo, traduz para português e me entrega um briefing com até cinco notícias. Eu abro, leio em uma página e já sei o que mudou.
+Todo dia, um time de cinco agentes (pesquisador, verificador, redator, guarda e humorista) varre as fontes que eu escolhi, separa o que é novo, traduz para português e me entrega um briefing com até cinco notícias. Eu abro, leio em uma página e já sei o que mudou. De quebra, o humorista transforma o dia num post curto de LinkedIn, com humor ácido, para quem não é da área entender e dar risada.
 
 ## O assunto
 
@@ -47,7 +47,7 @@ Veículos que cobrem bem IA:
 
 Briefing do dia: [URL do GitHub Pages]
 
-Os briefings também ficam na pasta `briefings/`, um arquivo por dia, com o nome `AAAA-MM-DD.md`.
+Os briefings também ficam na pasta `diario/`, um arquivo por dia, com o nome `AAAA-MM-DD.md`. As anotações brutas ficam em `fontes/` e a conferência dos links em `verificacao/`.
 
 ## Como eu sei que o briefing de hoje está bom
 
@@ -64,4 +64,10 @@ Os briefings também ficam na pasta `briefings/`, um arquivo por dia, com o nome
 
 - `RADAR.md`: a definição completa do radar (contexto, fontes, limites, ação, resultado, observáveis). Em caso de dúvida, ele manda.
 - `CLAUDE.md`: a memória do projeto, que o Claude lê toda vez que abre esta pasta.
-- `briefings/`: os briefings do dia a dia.
+- `diario/`: os briefings do dia a dia.
+- `fontes/` e `verificacao/`: o material de trabalho de cada dia (o que foi achado e o que conferiu).
+- `modelo-index.html`: o modelo da página; `index.html` é a página do dia, gerada a partir dele.
+- `linkedin/`: o post do dia em Word, com os links para o primeiro comentário.
+- `estilo/exemplos.md`: posts meus que o humorista usa como referência de tom.
+- `ferramentas/`: scripts de apoio (hoje, o que gera o Word do post).
+- `.claude/agents/`: os cinco agentes do time (pesquisador, verificador, redator, guarda e humorista).
