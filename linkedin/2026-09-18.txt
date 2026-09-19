@@ -1,0 +1,11 @@
+Hoje o radar pegou dois avisos de despejo. A GitHub vai desligar em 19 de outubro cinco dos modelos que rodam por trás do Copilot, o assistente de programação dela, entre eles o GPT-5.5 e o GPT-5.4. No lugar entra o GPT-5.6, em duas versões: Sol e Luna. Versão de software era número. Agora é casal de novela.
+
+O Google fez igual no Gemini para desenvolvedores: lançou o Antigravity Agent novo, o 09-2026, e marcou para 5 de outubro o desligamento do anterior, o 05-2026. Tem iogurte na minha geladeira com validade mais longa.
+
+Enquanto isso o Grok Build, a ferramenta da xAI que escreve código, ganhou memória. Agora lembra das decisões do projeto de uma sessão para a outra e tem até um comando chamado /dream, porque revisa o trabalho depois que você sai, feito gente que dorme com o problema e acorda com a resposta.
+
+Ou seja: as ferramentas aprenderam a lembrar justo na semana em que nada dura o bastante para ser lembrado. Eu dou aula disso. Monto o material, mostro em sala, e quando a turma volta o modelo do slide já tem data para sumir. Ainda bem que o que fica com o aluno é o raciocínio, não o nome do botão. Pelo menos é o que eu digo para mim mesmo.
+Fontes:
+https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/
+https://ai.google.dev/gemini-api/docs/changelog
+https://x.ai/news/grok-build-memory

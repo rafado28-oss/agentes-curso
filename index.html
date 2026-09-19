@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar — 18/09/2026</title>
+  <style>
+    :root {
+      --fundo: #ffffff;
+      --texto: #1a1a1a;
+      --apagado: #5c5c5c;
+      --linha: #e2e2e2;
+      --link: #0b57d0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fundo: #121212;
+        --texto: #ececec;
+        --apagado: #a0a0a0;
+        --linha: #2c2c2c;
+        --link: #8ab4f8;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px 16px 48px;
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    main, header, footer, nav { max-width: 720px; margin: 0 auto; }
+    header { border-bottom: 1px solid var(--linha); padding-bottom: 16px; margin-bottom: 24px; }
+    header h1 { font-size: 1.6rem; margin: 0 0 4px; }
+    header p { margin: 0; color: var(--apagado); }
+    main h2 { font-size: 1.25rem; margin: 32px 0 12px; }
+    main h3 { font-size: 1.05rem; margin: 20px 0 6px; }
+    main p { margin: 0 0 12px; }
+    main ul { padding-left: 20px; }
+    a { color: var(--link); word-break: break-word; }
+    nav { border-top: 1px solid var(--linha); margin-top: 40px; padding-top: 16px; }
+    nav h2 { font-size: 1rem; margin: 0 0 8px; color: var(--apagado); }
+    nav ul { padding-left: 20px; margin: 0; }
+    footer {
+      border-top: 1px solid var(--linha);
+      margin-top: 40px;
+      padding-top: 16px;
+      font-size: 0.9rem;
+      color: var(--apagado);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Radar — 18/09/2026</h1>
+    <p>18 de setembro de 2026</p>
+  </header>
+
+  <main>
+    <p><strong>Manchete do dia:</strong> GitHub vai desligar cinco modelos do Copilot em 19 de outubro, o que obriga quem usa a ferramenta em aula a trocar de modelo antes da data.</p>
+    <p><strong>Nas suas ferramentas:</strong> Atualização em Claude Code, GitHub Copilot, Gemini API e Grok Build; nada novo em Cursor.</p>
+
+    <h2>Notícias</h2>
+
+    <h3>1. GitHub vai descontinuar cinco modelos do Copilot em outubro</h3>
+    <p>A GitHub vai remover Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini e Grok 4.5 de todas as experiências do Copilot (Chat, inline edits, modos ask e agent) em 19 de outubro de 2026. As alternativas indicadas são Gemini 3.8 Flash, GPT-5.6 Sol, GPT-5.6 Luna e Grok 4.6; em contas Enterprise e Business a troca é automática, mas fluxos e integrações que dependem diretamente dos modelos antigos precisam ser atualizados antes do prazo.</p>
+    <p>Fonte: GitHub Changelog, 18/09/2026 — <a href="https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/">https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/</a></p>
+
+    <h3>2. Claude Code ganha suporte a AGENTS.md e corrige bug crítico de proxy</h3>
+    <p>A versão 2.1.277 do Claude Code passou a suportar o arquivo AGENTS.md, melhorou o proxy gateway e corrigiu o erro "text content blocks must be non-empty". A versão anterior, 2.1.276, resolveu uma falha em que toda requisição retornava erro 400 quando <code>ANTHROPIC_BASE_URL</code> apontava para um proxy; as versões 2.1.275 e 2.1.274 trouxeram atalho send-now e sincronização de skills/plugins do claude.ai.</p>
+    <p>Fonte: Anthropic / Claude Code, changelog no GitHub, 18/09/2026 — <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md</a></p>
+
+    <h3>3. Copilot code review passa a categorizar e resolver comentários sozinho</h3>
+    <p>O resumo de revisão de código do Copilot agora separa os comentários em "Open", "Resolved since last review" e "Previously missed", cada um com título descritivo. O Copilot passa a resolver automaticamente seus próprios comentários conforme a resposta do desenvolvedor e a gerar título e descrição de commit quando um lote de sugestões é aceito; o recurso já vale para todos os usuários.</p>
+    <p>Fonte: GitHub Changelog, 18/09/2026 — <a href="https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/">https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/</a></p>
+
+    <h3>4. Gemini API atualiza o Antigravity Agent e desliga a versão anterior</h3>
+    <p>O Google lançou o Antigravity Agent 09-2026 (<code>antigravity-preview-09-2026</code>) na API Gemini, substituindo o <code>antigravity-preview-05-2026</code>. Os parâmetros passam de snake_case para PascalCase e as edições de arquivo agora usam substituições por intervalo de linhas em vez de reescrever o arquivo inteiro; a versão anterior será desligada em 5 de outubro de 2026, o que exige migração de quem já integrou o agente.</p>
+    <p>Fonte: Google AI for Developers, changelog da API Gemini, 17/09/2026 — <a href="https://ai.google.dev/gemini-api/docs/changelog">https://ai.google.dev/gemini-api/docs/changelog</a></p>
+
+    <h3>5. Grok Build ganha memória entre sessões</h3>
+    <p>O Grok Build, agente de código da xAI, passou a reter entre sessões as convenções, decisões e fatos do projeto, revisando o trabalho em segundo plano ao fim de cada sessão e guardando as anotações em markdown organizado por tópico. Dois comandos novos, <code>/memory</code> e <code>/dream</code>, permitem navegar e reorganizar essas anotações; o recurso já está disponível no Grok Build.</p>
+    <p>Fonte: xAI, 16/09/2026 — <a href="https://x.ai/news/grok-build-memory">https://x.ai/news/grok-build-memory</a></p>
+
+    <h2>O que não conferiu</h2>
+    <ul>
+      <li>Nenhum</li>
+    </ul>
+
+    <p><em>Escrito em 18/09/2026 às 21:10.</em></p>
+  </main>
+
+  <nav>
+    <h2>Dias anteriores</h2>
+<p>Nenhum ainda.</p>
+  </nav>
+
+  <footer>
+    <p>Meu Radar: novidades práticas de IA para quem constrói produtos e software. Toda notícia tem link para a fonte; o que não conferiu na fonte não entra. Escrito por um time de agentes, revisado antes de publicar.</p>
+  </footer>
+</body>
+</html>
